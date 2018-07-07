@@ -69,7 +69,7 @@
 					    <br>
 					    <br>
 					    <div class="pop-up-submit">
-					    	<input type="submit" value="Додати">
+					    	<input id="time-added" type="submit" value="Додати">
 					    </div>
 					   
 					<br>
@@ -115,6 +115,12 @@
  		let btn_delete1 = document.getElementById('second-box');
  		btn_delete1.onclick = function(){
  			var isCancel = confirm("Ви дійсно хочете відмінити зміну?");
+			
+ 			
+ 		}
+		let time_added = document.getElementById('time-added');
+		time_added.onclick = function(){
+ 			alert("Записано!");
 			
  			
  		}
