@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="aside.css">
+	<link rel="stylesheet" href="time-line.css">
+	<link rel="stylesheet" href="table.css">
+	<link rel="stylesheet" href="modal.css">
+	<link rel="stylesheet" href="header.css">
+
+	<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen"
+     href="https://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+
+	
+	<title>Doctor's cab</title>
+</head>
+<body>
+	<div class="container">
+		<header class="header">
+			<img src="images/logo.png" alt="">
+			<h2>Doctor`s cab</h2>
+			<p>Вихід</p>
+		</header>
+		
+		<main class="main">
+		<div class="time-box">
+			<div class="time-points">
+				<div id="sunday">Нд</div>
+				<div id="monday">Пн</div>
+				<div id="tuesday">Вт</div>
+				<div id="wednesday">Ср</div>
+				<div id="thursday">Чт</div>
+				<div id="friday">Пт</div>
+				<div id="saturday">Сб</div>
+			</div>
+			<div class="time-line">
+				<div class="scale">
+					<div class="scale-box" id="first-box">Пн 12:00-Вт 00:00</div>
+					<div class="scale-box" id="second-box">Чт 9:00- Чт 21:00</div>
+				</div>
+				
+			</div>
+					<div id="myModal" class="mod">
+
+					  <div class="modal-cont">
+					  <span class="close">&times;</span>
+					   
+				
+				<form id="newpoint" action="">
+					<div id="datetimepicker" class="input-append date">
+							<label for="">Початок зміни:</label>
+					      <input name="day_of_begin" type="text"></input>
+					      <span class="add-on">
+					        <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+					      </span>
+					    </div>
+
+					<div id="datetimepicker1" class="input-append date">
+							<br>
+							<label for="">Закінчення зміни:</label>
+					      <input name="day_of_end" type="text"></input>
+					      <span class="add-on">
+					        <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+					      </span>
+					      <br>
+					      <br>
+					    </div>
+					    <br>
+					    <br>
+					    <div class="pop-up-submit">
+					    	<input type="submit" value="Додати">
+					    </div>
+					   
+					<br>
+					
+				</form>
+		 	 </div>
+		  </div>
+		</div>
+			<span style="font-size: 12px; margin-left: 20px;">*Push the interval to remove it</span>
+		 </main>
+
+		 <aside class="aside">
+		 	<div class="doctor-info">
+		 		<div class="doctor-avatar">
+		 			<img src="images/doctors_avatar.jpg" alt="">
+		 		</div>
+		 		<div class="doctor-description">
+		 			<h4>ПІП лікаря</h4>
+		 			<p>
+		 				<ul>
+		 					<li><img src="images/dantist-icon.png" alt=""> Стоматолог</li>
+		 					<li><img src="images/pay-icon.png" alt=""> 10$/h</li>
+		 					<li><img src="images/cabinet-icon.png" alt=""> №204</li>
+		 				</ul>
+
+		 				
+		 			</p>
+		 			<input type="button" value="Редагувати">
+		 		</div>
+		 	</div>
+		 </aside>
+	 </div>
+	</body>
+
+
+ 	<script  type="text/javascript">
+ 		let btn_delete = document.getElementById('first-box');
+ 		btn_delete.onclick = function(){
+ 			var isCancel = confirm("Ви дійсно хочете відмінити зміну?");
+				
+ 			
+ 		}
+ 		let btn_delete1 = document.getElementById('second-box');
+ 		btn_delete1.onclick = function(){
+ 			var isCancel = confirm("Ви дійсно хочете відмінити зміну?");
+			
+ 			
+ 		}
+	</script>
+		
+	<script type="text/javascript"
+     src="js/jquery.min.js">
+    </script> 
+    <script type="text/javascript"
+     src="js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript"
+     src="js/bootstrap-datetimepicker.min.js">
+    </script>
+    <script type="text/javascript"
+     src="js/bootstrap-datetimepicker.pt-BR.js">
+    </script>
+    <script type="text/javascript">
+      $('#datetimepicker').datetimepicker({
+        format: 'dd/MM/yyyy hh:mm',
+        language: 'ru'
+      });
+       $('#datetimepicker1').datetimepicker({
+        format: 'dd/MM/yyyy hh:mm',
+        language: 'ru'
+      });
+    </script>
+
+    <script type="text/javascript">
+		var modal = document.getElementById('myModal');
+
+		var btn1 = document.getElementById("sunday");
+		var btn2 = document.getElementById("monday");
+		var btn3 = document.getElementById("tuesday");
+		var btn4 = document.getElementById("wednesday");
+		var btn5 = document.getElementById("thursday");
+		var btn6 = document.getElementById("friday");
+		var btn7 = document.getElementById("saturday");
+
+		var span = document.getElementsByClassName("close")[0];
+ 
+		btn1.onclick = function() {
+		    modal.style.display = "block";
+		}
+		btn2.onclick = function() {
+		    modal.style.display = "block";
+		}
+		btn3.onclick = function() {
+		    modal.style.display = "block";
+		}
+		btn4.onclick = function() {
+		    modal.style.display = "block";
+		}
+		btn5.onclick = function() {
+		    modal.style.display = "block";
+		}
+		btn6.onclick = function() {
+		    modal.style.display = "block";
+		}
+		btn7.onclick = function() {
+		    modal.style.display = "block";
+		}
+
+		span.onclick = function() {
+		    modal.style.display = "none";
+		}
+
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		}
+    </script>
+</html>
